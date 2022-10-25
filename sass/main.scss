@@ -1,6 +1,6 @@
-@use './colors' as c;
-@use './components' as components;
-@use './mixins' as m;
+@use "./colors" as c;
+@use "./components" as components;
+@use "./mixins" as m;
 
 *,
 *::before,
@@ -18,4 +18,17 @@ html {
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.6rem;
+}
+
+// nav
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 1rem;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+	
 }
