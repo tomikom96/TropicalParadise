@@ -197,6 +197,27 @@ body {
 	}
 }
 
+// HERO-IMG
+
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include heroImages("../img/tahiti_640.jpg");
+	text-align: center;
+	color: $pure-white;
+	overflow: hidden;
+
+	&__title {
+		font-family: "Dancing Script", cursive;
+		margin-bottom: 0.5em;
+		font-size: 4.8rem;
+	}
+
+	&__text {
+		padding: 1em 0;
+	}
+}
+
 // =====================================
 // MEDIA
 // =====================================
@@ -253,6 +274,19 @@ body {
 			font-size: 1.8rem;
 		}
 	}
+
+	.hero-img {
+		padding: 30rem 2em;
+
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -274,12 +308,12 @@ body {
 			font-size: 4.8rem;
 		}
 	}
-	
+
 	.dreams {
 		&__box {
 			margin: 5em 0;
 
-			&-text{
+			&-text {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
@@ -293,6 +327,20 @@ body {
 
 		&__text {
 			font-size: 2.2rem;
+		}
+	}
+
+	.hero-img {
+		padding: 40rem 2em;
+		background-image: $blue-gradient, url("../img/tahiti_1920.jpg");
+
+		&__title {
+			font-size: 7.2rem;
+		}
+
+		hr {
+			width: 60%;
+			min-width: 900px;
 		}
 	}
 }
