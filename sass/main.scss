@@ -392,7 +392,7 @@ body {
 }
 
 // REVIEWS
-@media(max-width: 767px) {
+@media (max-width: 767px) {
 	.reviews.section-ppadding {
 		padding: 6em 0;
 	}
@@ -405,10 +405,10 @@ body {
 		padding: 2em;
 		border-radius: 8px;
 		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
-		transition: transform .3s;
+		transition: transform 0.3s;
 
 		&:hover {
-			transform: scale(.95);
+			transform: scale(0.95);
 		}
 	}
 
@@ -450,7 +450,8 @@ body {
 		background-color: $dark;
 	}
 
-	&__form, &__form-top {
+	&__form,
+	&__form-top {
 		display: flex;
 		flex-direction: column;
 	}
@@ -468,7 +469,7 @@ body {
 		@include contactForm;
 
 		max-width: 100%;
-		min-width: 100%; 
+		min-width: 100%;
 		width: 100%;
 		min-height: 150px;
 	}
@@ -483,6 +484,7 @@ body {
 		border-radius: 8px;
 		background-color: $main-color;
 		cursor: pointer;
+		font-size: 1.7rem;
 
 		&::before {
 			background-color: $secondary-color;
@@ -490,6 +492,55 @@ body {
 	}
 }
 
+// FOOTER
+
+.footer {
+	color: $pure-white;
+	background-color: $dark;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+
+	&__box-social {
+		margin: 2em 0 1em;
+	}
+
+	&__box-link {
+		padding: 0 .3em;
+		font-size: 3.6rem;
+		color: $pure-white;
+		text-decoration: none;
+		transition: color .3s;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:hover {
+			color: $light-white;
+		}
+	}
+
+	&__bottom-text {
+		padding: 2em;
+		text-align: center;
+	}
+}
 
 // =====================================
 // MEDIA
@@ -604,6 +655,44 @@ body {
 		&__card {
 			margin: 1em;
 			width: 45%;
+		}
+	}
+
+	.footer {
+		
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box-desktop {
+			display: block;
+		}
+
+		&__box {
+			margin: 0 2em;
+			width: 25%;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-title {
+			resize: 2.4rem;
+		}
+
+		&__box-list {
+			list-style: none;
+		}
+
+		&__box-list-item {
+			margin-bottom: 1em;
+			
+			a {
+				color: $light-white;
+				text-decoration: none;
+			}
 		}
 	}
 }
